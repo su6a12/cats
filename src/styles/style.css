@@ -10,40 +10,41 @@
     justify-content: center;
 }
 
-.image {
+.image-container {
     list-style: none;
     flex-grow: 1;
     width: 50%;
+    box-shadow: 0 0 2px 3px #EfEFF1;
+    margin: 1%;
 }
 
 .per-image {
     width: 100%;
 }
 
-button {
+.delete-img {
     border: 0;
     outline: none;
     box-shadow: 2px 3px 1px #1757c9;
     background-color: cornflowerblue;
     color: #fff;
     cursor: pointer;
-    transition: all .03s linear;
+    transition: transform .03s linear;
     border-radius: 5px;
     margin: 5px;
 }
 
-button:active {
+.delete-img:active {
     box-shadow: 2px 2px 1px #1757c9;
     transform: translateY(3px);
 }
 
-@media all and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .image-grid {
         width: 70%;
         margin: 0 auto;
     }
-    .image {
+    .image-container {
         width: 25%;
-        margin: 1%;
     }
 }

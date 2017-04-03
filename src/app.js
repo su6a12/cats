@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import {render} from 'react-dom'
 import App from './components/App'
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
@@ -26,4 +26,4 @@ const app = (
     </Provider>
 )
 
-ReactDOM.render(app, document.getElementById('cats'))
+render(app, document.getElementById('cats'))

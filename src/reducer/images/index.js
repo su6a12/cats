@@ -6,11 +6,11 @@ const initialState = {
   isFetching: true
 }
 
-const reducer = (state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case SET_IMAGES:
       return {
-        'images': action.images,
+        images: action.images,
         isFetching: false
       }
     case DELETE_IMAGE:
@@ -18,11 +18,10 @@ const reducer = (state = initialState, action) => {
         return image.id !== action.imageToRemove
       });
       return {
-        'images': removedImage
+        images: removedImage
       }
       default:
         return state
   }
 }
 
-export default reducer

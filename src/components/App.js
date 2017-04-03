@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-import PhotoGrid from './PhotoGrid'
+import ImageGrid from './ImageGrid'
 
 const App = () =>
   <div>
-    <h1 className='page-title'>Cats for Days!</h1>
-    <PhotoGrid/>
+    <h1>Cats for Days!</h1>
+    <ImageGrid/>
   </div>
 
 export default App

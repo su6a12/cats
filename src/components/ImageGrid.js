@@ -5,14 +5,14 @@ import {deleteImage} from '../reducer/images/actions'
 import Image from './Image'
 
 // use ES6 destructuring to pass in images array and deleteImage function
-const PhotoGrid  = ({images, deleteImage}) => 
+const ImageGrid  = ({images, deleteImage}) => 
   <div>
-    {images.isFetching ? <div>Loading...</div> : null}
+    {images.isFetching ? <div>Please Wait...</div> : null}
     <ul className='image-grid'>
       {images.images.map(image =>
         <Image
           key={image.id}
-          onDelete={deleteImage}
+          onDeleteClick={deleteImage}
           {...image}/>
       )}
     </ul>
@@ -30,4 +30,4 @@ const mapDispatchtoProps = dispatch => ({
   }
 })
 
-export default connect(mapStateToProps, mapDispatchtoProps)(PhotoGrid)
+export default connect(mapStateToProps, mapDispatchtoProps)(ImageGrid)
